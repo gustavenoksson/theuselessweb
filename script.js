@@ -1,10 +1,19 @@
+const body = document.querySelector('body');
+const main = document.querySelector('main');
+
 const getFact = async () => {
   const res = await fetch(
     'https://uselessfacts.jsph.pl/random.json?language=en'
   );
-  const fact = await res.json();
+  const facts = await res.json();
+
+  console.log(facts.text);
 };
 
 // fetch('https://uselessfacts.jsph.pl/random.json?language=en')
 //   .then((response) => response.json())
-//   .then((data) => console.log(data));
+//   .then((fact) => {
+//     console.log(fact.text);
+//   });
+
+getFact();

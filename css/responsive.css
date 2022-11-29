@@ -1,0 +1,11 @@
+@media screen and (min-width: 1024px) {
+  .computerSection {
+    justify-content: flex-start;
+  }
+  .chassis {
+    height: 70%;
+  }
+  .keyboard {
+    height: 10rem;
+  }
+}

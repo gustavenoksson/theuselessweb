@@ -10,19 +10,19 @@
   font-weight: 400;
 }
 
-/* header */
-header {
-  width: 100%;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@font-face {
+  font-family: 'PressStart';
+  src: url('fonts/PressStart2P-Regular.woff'),
+    url('fonts/PressStart2P-Regular.woff2');
 }
+
+/* header */
 
 body {
   font-size: 16px;
   height: 100vh;
   width: 100%;
+  font-family: 'PressStart';
 }
 
 /* main */
@@ -43,13 +43,18 @@ main {
 }
 
 .chassis {
-  height: 30%;
-  width: 70%;
+  height: 40%;
+  width: 80%;
   background-color: rgb(179, 179, 179);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.chassis p {
+  position: absolute;
+  bottom: 3px;
 }
 
 .powerBtn {
@@ -58,7 +63,7 @@ main {
   width: 15px;
   background-color: brown;
   position: absolute;
-  bottom: 2px;
+  bottom: 5px;
   right: 3px;
   cursor: pointer;
 }
@@ -66,11 +71,29 @@ main {
 .screen {
   width: 90%;
   height: 85%;
+  display: flex;
   background-color: rgb(0, 0, 0);
+  transition: 1.5s ease-in;
+  position: relative;
 }
 
 .keyboard {
   height: 5rem;
   width: 60%;
   background-color: rgb(118, 118, 118);
+}
+
+.powerSaver {
+  height: 10px;
+  width: 10px;
+  background-color: azure;
+  animation: screenSaver 6s infinite;
+  transition: all;
+  position: absolute;
+}
+
+/* animation classes */
+.screenStart {
+  animation: loadIn ease-in;
+  background-color: green;
 }

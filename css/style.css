@@ -16,7 +16,7 @@ main {
 }
 
 .chassis {
-  height: 40%;
+  height: 80%;
   width: 80%;
   background-color: rgb(128, 128, 128);
   border-radius: 5px;
@@ -24,17 +24,20 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: 1s all ease;
+  transition: 4s all ease;
+  box-shadow: inset 0 0 10px #000000;
 }
 
 .chassisFullSize {
   height: 100%;
   width: 100%;
+  border-radius: 0px;
 }
 
 .chassis p {
   position: absolute;
-  bottom: 3px;
+  bottom: 10px;
+  color: white;
 }
 
 .powerBtn {
@@ -55,8 +58,9 @@ main {
 }
 
 .screenBackground {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 90%;
+  border-radius: 10px;
 }
 
 .backgroundContainer {
@@ -85,5 +89,5 @@ main {
 /* animation classes */
 
 .loadIn {
-  animation: loadIn 0.3s linear;
+  animation: loadIn 1.5s linear;
 }

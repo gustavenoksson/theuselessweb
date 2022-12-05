@@ -18,6 +18,7 @@
   100% {
     opacity: 100;
     scale: 1;
+    background-color: none;
   }
 }
 

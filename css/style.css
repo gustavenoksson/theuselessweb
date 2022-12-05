@@ -1,30 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-@font-face {
-  font-family: 'VT323';
-  src: url('fonts/VT323-Regular.woff') format('woff'),
-    url('fonts/VT323-Regular.woff2') format('woff2');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'PressStart';
-  src: url('fonts/PressStart2P-Regular.woff'),
-    url('fonts/PressStart2P-Regular.woff2');
-}
-
-/* header */
-
-body {
-  font-size: 16px;
-  height: 100vh;
-  width: 100%;
-  font-family: 'PressStart';
-}
-
 /* main */
 main {
   height: 100%;
@@ -45,7 +18,8 @@ main {
 .chassis {
   height: 40%;
   width: 80%;
-  background-color: rgb(179, 179, 179);
+  background-color: rgb(128, 128, 128);
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,10 +44,13 @@ main {
 
 .screen {
   width: 90%;
-  height: 85%;
-  display: flex;
-  background-color: rgb(0, 0, 0);
-  transition: 1.5s ease-in;
+  height: 90%;
+  background-color: black;
+}
+
+.screenBackground {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -81,6 +58,8 @@ main {
   height: 5rem;
   width: 60%;
   background-color: rgb(118, 118, 118);
+  transform: perspective(600px) rotateX(20deg);
+  border-radius: 6px;
 }
 
 .powerSaver {
@@ -93,7 +72,7 @@ main {
 }
 
 /* animation classes */
-.screenStart {
-  animation: loadIn ease-in;
-  background-color: green;
+
+.loadIn {
+  animation: loadIn 4s ease-in-out;
 }

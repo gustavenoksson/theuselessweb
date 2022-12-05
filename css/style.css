@@ -24,6 +24,12 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: 1s all ease;
+}
+
+.chassisFullSize {
+  height: 100%;
+  width: 100%;
 }
 
 .chassis p {
@@ -51,7 +57,12 @@ main {
 .screenBackground {
   width: 100%;
   height: 100%;
-  position: relative;
+}
+
+.backgroundContainer {
+  background-color: aliceblue;
+  height: 100%;
+  width: 100%;
 }
 
 .keyboard {
@@ -74,5 +85,5 @@ main {
 /* animation classes */
 
 .loadIn {
-  animation: loadIn 4s ease-in-out;
+  animation: loadIn 0.3s linear;
 }

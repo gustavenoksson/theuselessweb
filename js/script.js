@@ -11,10 +11,55 @@ const insperationalWords = [
   'The payraise is coming I swear!',
 ];
 
-const startDevice = () => {
-  screen.classList.toggle('backgroundImg');
-  device.classList.toggle('deviceFullSize');
+const activateBackgroundImg = () => {
+  screen.classList.add('backgroundImg');
+  device.classList.add('deviceFullSize');
   keyboard.style.display = 'none';
 };
 
-startBtn.addEventListener('click', startDevice);
+const deviceIcons = [
+  {
+    name: 'E-mail',
+    img: 'images/deviceIcons/emailIcon.svg',
+    class: 'email',
+    alt: 'Icon that represents email.',
+  },
+  {
+    name: 'Chat',
+    img: 'images/deviceIcons/messageIcon.svg',
+    class: 'chat',
+    alt: 'Icon that represents chat.',
+  },
+];
+
+// FUNCTION TO CREATE ICONS ON DEVICE FROM DEVICEICONS ARRAY
+const createIcons = () => {
+  const iconsContainer = document.createElement('div');
+  iconsContainer.classList.add('iconsContainer');
+  screen.appendChild(iconsContainer);
+
+  deviceIcons.forEach((deviceIcon) => {
+    const iconContainer = document.createElement('div');
+    const iconImg = document.createElement('img');
+    const iconName = document.createElement('p');
+    iconsContainer.appendChild(iconContainer);
+    iconContainer.appendChild(iconImg);
+    iconContainer.appendChild(iconName);
+
+    iconContainer.classList.add('iconContainer');
+
+    iconImg.src = deviceIcon.img;
+    iconImg.classList.add(deviceIcon.class);
+    iconImg.setAttribute('alt', deviceIcon.alt);
+    iconName.textContent = deviceIcon.name;
+  });
+};
+
+startBtn.addEventListener(
+  'click',
+  () => {
+    activateBackgroundImg();
+    createIcons();
+  },
+  { once: true }
+);

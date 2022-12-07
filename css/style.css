@@ -101,6 +101,29 @@ main {
   display: none;
 }
 
+/* icons */
+.iconsContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.iconContainer {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.iconContainer img {
+  height: 100%;
+  width: 100%;
+}
+
 /* animation classes */
 
 .loadIn {

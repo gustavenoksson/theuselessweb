@@ -56,6 +56,7 @@ main {
   height: 100%;
   width: 100%;
   border-radius: 0px;
+  box-shadow: inset 0 0 20px black;
 }
 
 .screen {
@@ -63,6 +64,7 @@ main {
   width: 90%;
   background-color: var(--screen-color);
   background-size: cover;
+  box-shadow: inset 0 0 5px black;
 }
 
 .backgroundImg {
@@ -111,8 +113,8 @@ main {
 }
 
 .iconContainer {
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -122,10 +124,11 @@ main {
 .iconContainer img {
   height: 100%;
   width: 100%;
+  transition: 0.2s ease;
+}
+
+.iconContainer img:hover {
+  scale: 0.95;
 }
 
 /* animation classes */
-
-.loadIn {
-  animation: loadIn 2s ease;
-}

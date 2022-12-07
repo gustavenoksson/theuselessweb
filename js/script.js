@@ -6,6 +6,8 @@ const startBtn = document.querySelector('.startBtn');
 const keyboard = document.querySelector('.keyboard');
 const btnSquare = document.querySelector('.btnSquare');
 
+// icons
+
 const insperationalWords = [
   'Think of the money you are making!',
   'The payraise is coming I swear!',
@@ -17,6 +19,7 @@ const activateBackgroundImg = () => {
   keyboard.style.display = 'none';
 };
 
+// Array of icons on the device.
 const deviceIcons = [
   {
     name: 'E-mail',
@@ -26,13 +29,13 @@ const deviceIcons = [
   },
   {
     name: 'Chat',
-    img: 'images/deviceIcons/messageIcon.svg',
+    img: 'images/deviceIcons/chatIcon.svg',
     class: 'chat',
     alt: 'Icon that represents chat.',
   },
 ];
 
-// FUNCTION TO CREATE ICONS ON DEVICE FROM DEVICEICONS ARRAY
+// Function to create icons on device startup.
 const createIcons = () => {
   const iconsContainer = document.createElement('div');
   iconsContainer.classList.add('iconsContainer');

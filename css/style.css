@@ -19,6 +19,10 @@ body {
   display: none;
 }
 
+.show {
+  display: block;
+}
+
 /* main */
 main {
   height: 100%;
@@ -31,11 +35,13 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .device {
-  height: 90%;
+  height: 100%;
   width: 80%;
   background-color: var(--device-color);
   border-radius: 20px;
@@ -57,6 +63,10 @@ main {
   width: 90%;
   background-color: var(--screen-color);
   background-size: cover;
+}
+
+.backgroundImg {
+  background-image: url('/images/mobileBackground.jpeg');
 }
 
 .startBtn {
@@ -82,4 +92,17 @@ main {
   height: 15px;
   width: 15px;
   border: 2px solid black;
+}
+
+.keyboard {
+  height: 30%;
+  width: 70%;
+  background-color: var(--device-color);
+  display: none;
+}
+
+/* animation classes */
+
+.loadIn {
+  animation: loadIn 2s ease;
 }

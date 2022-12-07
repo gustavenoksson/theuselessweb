@@ -1,23 +1,9 @@
 @keyframes loadIn {
-  0% {
-    opacity: 0;
-    scale: 0;
+  from {
+    background-position: 0 0;
   }
-  25% {
-    opacity: 25;
-    scale: 0.25;
-  }
-  50% {
-    opacity: 50;
-    scale: 0.5;
-  }
-  75% {
-    opacity: 75;
-    scale: 0.75;
-  }
-  100% {
-    opacity: 100;
-    scale: 1;
+  to {
+    background-position: 100% 0;
   }
 }
 

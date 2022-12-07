@@ -1,13 +1,14 @@
-const windowWidth = window.matchMedia('(min-width: 1024px)');
+const desktopWidth = window.matchMedia('(min-width: 1024px)');
 
-if (windowWidth.matches) {
-  startBtn.addEventListener('click', () => {
-    startDevice('url(/images/windowsBackground.jpeg)');
-  });
-
-  btnSquare.classList.add('hidden');
-} else {
-  startBtn.addEventListener('click', () => {
-    startDevice('url(/images/mobileBackground.jpeg)');
-  });
-}
+const windowResize = (width) => {
+  if (width.matches) {
+    startBtn.addEventListener('click', () => {
+      startDevice('url(/images/windowsBackground.jpeg)');
+    });
+  } else {
+    startBtn.addEventListener('click', () => {
+      startDevice('url(/images/mobileBackground.jpeg)');
+    });
+  }
+};
+windowResize(desktopWidth);

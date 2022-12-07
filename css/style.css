@@ -70,6 +70,14 @@ main {
   align-items: center;
 }
 
+.startBtn:hover {
+  box-shadow: inset 2px 2px 2px black;
+}
+
+.startBtn:hover .btnSquare {
+  scale: 0.95;
+}
+
 .btnSquare {
   height: 15px;
   width: 15px;

@@ -58,11 +58,16 @@ const createIcons = () => {
   });
 };
 
+createIcons();
+
 startBtn.addEventListener(
   'click',
   () => {
     activateBackgroundImg();
-    createIcons();
   },
   { once: true }
 );
+
+const email = document.querySelector('.email').addEventListener('click', () => {
+  console.log('hello');
+});

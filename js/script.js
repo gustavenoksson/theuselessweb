@@ -8,9 +8,9 @@ const btnSquare = document.querySelector('.btnSquare');
 
 // Function to set a background img url to screen div.
 const activateBackgroundImg = () => {
-  screen.classList.add('backgroundImg');
   device.classList.add('deviceFullSize');
   keyboard.style.display = 'none';
+  screen.style.backgroundColor = 'green';
 };
 
 // Array of icons on the device.
@@ -27,9 +27,15 @@ const deviceIcons = [
     class: 'chat',
     alt: 'Icon that represents chat.',
   },
+  {
+    name: 'Settings',
+    img: 'images/deviceIcons/settingsIcon.svg',
+    class: 'settings',
+    alt: 'Icon that represents settings.',
+  },
 ];
 
-// Function to create icons on device startup.
+// Function to create icons on device startup. Icons are created from deviceIcons array.
 const createIcons = () => {
   const iconsContainer = document.createElement('div');
   iconsContainer.classList.add('iconsContainer');

@@ -7,6 +7,7 @@ const bossEmails = [
 
 const iconFunctions = () => {
   const email = document.querySelector('.email');
+  const settings = document.querySelector('.settings');
 
   // Create icon container.
   const iconBox = document.createElement('article');
@@ -88,8 +89,24 @@ const iconFunctions = () => {
 
   email.addEventListener('click', emailFunction);
 
+  // Settings icon function
+  const settingsFunction = () => {
+    iconBox.classList.remove('hidden');
+    iconBoxHeadline.textContent = 'SETTINGS';
+
+    const settingsContent = document.createElement('div');
+    settingsContent.classList.add('settingsContent');
+    iconBoxContentContainer.appendChild(settingsContent);
+
+    iconBoxClose.addEventListener('click', () => {
+      closeIconFunction(settingsContent);
+    });
+  };
+
   const closeIconFunction = (target) => {
     iconBox.classList.add('hidden');
     target.remove();
   };
+
+  settings.addEventListener('click', settingsFunction);
 };

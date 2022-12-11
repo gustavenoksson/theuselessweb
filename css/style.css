@@ -80,10 +80,6 @@ main {
   position: relative;
 }
 
-.backgroundImg {
-  background-image: url('/images/mobileBackground.jpeg');
-}
-
 .startBtn {
   height: 40px;
   width: 40px;
@@ -122,7 +118,8 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 35px;
+  padding: 15px;
 }
 
 .iconContainer {
@@ -236,5 +233,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Settings icon function */
+.settingsContent {
+  width: 80%;
+  height: 100%;
+  display: flex;
   flex-wrap: wrap;
 }

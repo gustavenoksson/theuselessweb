@@ -6,6 +6,7 @@ const startBtn = document.querySelector('.startBtn');
 const keyboard = document.querySelector('.keyboard');
 const btnSquare = document.querySelector('.btnSquare');
 
+// Function to set a background img url to screen div.
 const activateBackgroundImg = () => {
   screen.classList.add('backgroundImg');
   device.classList.add('deviceFullSize');

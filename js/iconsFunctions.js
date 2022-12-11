@@ -6,11 +6,9 @@ const bossEmails = [
 ];
 
 const iconFunctions = () => {
-  // Icons
   const email = document.querySelector('.email');
-  const chat = document.querySelector('.chat');
 
-  // Create icon container
+  // Create icon container.
   const iconBox = document.createElement('article');
   const iconBoxClose = document.createElement('div');
   const iconBoxContentContainer = document.createElement('div');
@@ -25,7 +23,7 @@ const iconFunctions = () => {
   iconBox.appendChild(iconBoxContentContainer);
   iconBoxContentContainer.appendChild(iconBoxHeadline);
 
-  //   Email icon function
+  //   Email icon function.
   const emailFunction = () => {
     iconBox.classList.remove('hidden');
     iconBoxHeadline.textContent = 'EMAIL';
@@ -43,7 +41,7 @@ const iconFunctions = () => {
 
     emailContent.classList.add('emailContent');
 
-    // Get random email on mail button click
+    // Get random email on mail button click.
     mailBtn.addEventListener('click', () => {
       unopenedEmailImg.remove();
       mailBtn.remove();
@@ -69,21 +67,29 @@ const iconFunctions = () => {
       emailContent.appendChild(replyInputField);
       emailContent.appendChild(sendBtn);
 
+      // Writes a reply on the the emails input field when reply button is clicked.
       replyButton.addEventListener('click', () => {
         const replyText = document.createElement('p');
         replyText.textContent = 'I quit';
         replyInputField.appendChild(replyText);
       });
+
+      // Closes application on device when send button is clicked.
+      sendBtn.addEventListener('click', () => {
+        closeIconFunction(emailContent);
+      });
     });
-    closeIconFunction(emailContent);
+
+    // Closes application on device when exit button is clicked.
+    iconBoxClose.addEventListener('click', () => {
+      closeIconFunction(emailContent);
+    });
   };
 
   email.addEventListener('click', emailFunction);
 
   const closeIconFunction = (target) => {
-    iconBoxClose.addEventListener('click', () => {
-      iconBox.classList.add('hidden');
-      target.remove();
-    });
+    iconBox.classList.add('hidden');
+    target.remove();
   };
 };

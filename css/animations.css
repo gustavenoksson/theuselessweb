@@ -1,23 +1,11 @@
-@keyframes loadIn {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100% 0;
-  }
-}
-
-@keyframes screenSaver {
+@keyframes jump {
   0% {
-    margin-left: 0%;
-    margin-top: 0%;
+    transform: translateY(0);
   }
   50% {
-    margin-left: 100%;
-    margin-top: 50%;
+    transform: translateY(-10px);
   }
   100% {
-    margin-left: 0%;
-    margin-top: 0%;
+    transform: translateY(0);
   }
 }

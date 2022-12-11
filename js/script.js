@@ -6,11 +6,6 @@ const startBtn = document.querySelector('.startBtn');
 const keyboard = document.querySelector('.keyboard');
 const btnSquare = document.querySelector('.btnSquare');
 
-const insperationalWords = [
-  'Think of the money you are making!',
-  'The payraise is coming I swear!',
-];
-
 const activateBackgroundImg = () => {
   screen.classList.add('backgroundImg');
   device.classList.add('deviceFullSize');

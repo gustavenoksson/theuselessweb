@@ -65,6 +65,7 @@ main {
   background-color: var(--screen-color);
   background-size: cover;
   box-shadow: inset 0 0 5px black;
+  position: relative;
 }
 
 .backgroundImg {
@@ -130,6 +131,50 @@ main {
 
 .iconContainer img:hover {
   scale: 0.95;
+}
+
+/* email function */
+
+.iconBox {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(246, 246, 189);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iconBoxClose {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(210, 9, 9);
+  align-self: flex-end;
+  transition: 0.3s ease;
+}
+
+.iconBoxClose:hover {
+  scale: 0.95;
+}
+
+.iconBoxContentContainer {
+  height: 90%;
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(221, 221, 196);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* animation classes */

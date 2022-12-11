@@ -6,8 +6,6 @@ const startBtn = document.querySelector('.startBtn');
 const keyboard = document.querySelector('.keyboard');
 const btnSquare = document.querySelector('.btnSquare');
 
-// icons
-
 const insperationalWords = [
   'Think of the money you are making!',
   'The payraise is coming I swear!',
@@ -58,16 +56,12 @@ const createIcons = () => {
   });
 };
 
-createIcons();
-
 startBtn.addEventListener(
   'click',
   () => {
     activateBackgroundImg();
+    createIcons();
+    iconFunctions();
   },
   { once: true }
 );
-
-const email = document.querySelector('.email').addEventListener('click', () => {
-  console.log('hello');
-});

@@ -1,3 +1,4 @@
+// Array of emails.
 const bossEmails = [
   'Remember that you have to work overtime this saturday ;)',
   'Remember that christmas bonus that was coming? I spent it so maybe next year!',
@@ -7,6 +8,7 @@ const bossEmails = [
   'Congratulations on getting promoted to the job you’re already doing.',
 ];
 
+// Array of background color boxes.
 const backgroundColorDivs = [
   {
     name: 'Red',
@@ -74,6 +76,7 @@ const iconFunctions = () => {
 
       emailContent.appendChild(mailText);
 
+      // Create reply input field and buttons.
       const replyButton = document.createElement('button');
       const replyButtonText = document.createElement('p');
       const replyInputField = document.createElement('div');
@@ -110,7 +113,7 @@ const iconFunctions = () => {
 
   email.addEventListener('click', emailFunction);
 
-  // Settings icon function
+  // Settings icon function.
   const settingsFunction = () => {
     iconBox.classList.remove('hidden');
     iconBoxHeadline.textContent = 'SETTINGS';
@@ -122,6 +125,7 @@ const iconFunctions = () => {
     iconBoxContentContainer.appendChild(settingsContent);
     settingsContent.appendChild(chooseBackgroundHeadline);
 
+    // Loops trough backgroundColorDivs array to add color boxes in settings function.
     backgroundColorDivs.forEach((backgroundColorDiv) => {
       const chooseColorBoxContainer = document.createElement('div');
       const chooseColorBoxTitle = document.createElement('p');
@@ -134,6 +138,7 @@ const iconFunctions = () => {
       chooseColorBoxContainer.appendChild(chooseColorBox);
       settingsContent.appendChild(chooseColorBoxContainer);
 
+      // When user clicks on the color boxes background color is set on device screen.
       chooseColorBox.addEventListener('click', () => {
         screen.style.backgroundColor = backgroundColorDiv.color;
         chooseColorBox.classList.add('backgroundSelected');

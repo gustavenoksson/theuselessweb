@@ -1,5 +1,4 @@
 const body = document.querySelector('body');
-const main = document.querySelector('main');
 const device = document.querySelector('.device');
 const screen = document.querySelector('.screen');
 const startBtn = document.querySelector('.startBtn');

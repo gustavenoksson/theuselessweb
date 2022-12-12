@@ -236,6 +236,11 @@ main {
   flex-wrap: wrap;
 }
 
+.backgroundImg {
+  background-image: url('../images/mobileBackground.jpeg');
+  object-fit: fill;
+}
+
 /* Settings icon function */
 .settingsContent {
   width: 80%;

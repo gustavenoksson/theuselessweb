@@ -10,7 +10,7 @@ const btnSquare = document.querySelector('.btnSquare');
 const activateBackgroundImg = () => {
   device.classList.add('deviceFullSize');
   keyboard.style.display = 'none';
-  screen.style.backgroundColor = 'green';
+  screen.classList.add('backgroundImg');
 };
 
 // Array of icons on the device.

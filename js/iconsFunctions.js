@@ -3,6 +3,8 @@ const bossEmails = [
   'Remember that christmas bonus that was coming? I spent it so maybe next year!',
   'No one saw you at the office working overtime so no extra money for you sorry!',
   'I promise more money wont make you happier! Trust me!',
+  'Please submit your ideas to me today so I can submit them as my own tomorrow.',
+  'Congratulations on getting promoted to the job you’re already doing.',
 ];
 
 const iconFunctions = () => {

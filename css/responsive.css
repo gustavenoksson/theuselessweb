@@ -14,4 +14,8 @@
   .btnSquare {
     border-radius: 100%;
   }
+
+  .backgroundImg {
+    background-image: url('../images/windowsBackground.jpeg');
+  }
 }

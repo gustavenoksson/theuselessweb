@@ -1,12 +1,11 @@
-INSERT MANDATORY GIF
+# The Useless Device
 
-# Project Title
-
-Text about the project. This would also be a great place to link the game on Netlify.
+For no reason at all you can now use a less practical device inside of your own device.
 
 # Installation
 
-Add the installation instructions.
+1. Clone this repository.
+2. Open index.html with live server
 
 # Code Review
 
@@ -20,5 +19,5 @@ Add the installation instructions.
 
 Tested by the following people:
 
-1. Jane Doe
-2. John Doe
+1. Emma Hedlund
+2. Tobias Åhlund

@@ -7,6 +7,24 @@ const bossEmails = [
   'Congratulations on getting promoted to the job you’re already doing.',
 ];
 
+const backgroundColorDivs = [
+  {
+    name: 'Red',
+    color: 'Red',
+    class: 'backgroundColorDivRed',
+  },
+  {
+    name: 'Green',
+    color: 'Green',
+    class: 'backgroundColorDivGreen',
+  },
+  {
+    name: 'Blue',
+    color: 'Blue',
+    class: 'backgroundColorDivBlue',
+  },
+];
+
 const iconFunctions = () => {
   const email = document.querySelector('.email');
   const settings = document.querySelector('.settings');
@@ -97,8 +115,24 @@ const iconFunctions = () => {
     iconBoxHeadline.textContent = 'SETTINGS';
 
     const settingsContent = document.createElement('div');
+    const chooseBackgroundHeadline = document.createElement('p');
+    chooseBackgroundHeadline.textContent = 'Choose Background';
     settingsContent.classList.add('settingsContent');
     iconBoxContentContainer.appendChild(settingsContent);
+    settingsContent.appendChild(chooseBackgroundHeadline);
+
+    backgroundColorDivs.forEach((backgroundColorDiv) => {
+      const chooseColorBoxContainer = document.createElement('div');
+      const chooseColorBoxTitle = document.createElement('p');
+      const chooseColorBox = document.createElement('div');
+      chooseColorBoxContainer.classList.add('chooseColorBoxContainer');
+      chooseColorBox.classList.add(backgroundColorDiv.class);
+      chooseColorBoxTitle.textContent = backgroundColorDiv.name;
+
+      chooseColorBoxContainer.appendChild(chooseColorBoxTitle);
+      chooseColorBoxContainer.appendChild(chooseColorBox);
+      settingsContent.appendChild(chooseColorBoxContainer);
+    });
 
     iconBoxClose.addEventListener('click', () => {
       closeIconFunction(settingsContent);

@@ -1,5 +1,18 @@
 @media screen and (min-width: 1024px) {
   /* device section */
+  .device {
+    border-radius: 0px;
+    margin-top: 10px;
+  }
+
+  .keyboard {
+    margin-bottom: 10px;
+  }
+
+  .deviceFullSize {
+    margin-top: 0px;
+  }
+
   .keyboard {
     display: block;
   }
@@ -15,7 +28,10 @@
     border-radius: 100%;
   }
 
-  .backgroundImg {
-    background-image: url('../images/windowsBackground.jpeg');
+  .backgroundColorDivRed,
+  .backgroundColorDivGreen,
+  .backgroundColorDivBlue {
+    height: 100px;
+    width: 100px;
   }
 }

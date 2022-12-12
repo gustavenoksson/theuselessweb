@@ -5,6 +5,9 @@
   --screen-color: rgb(208, 208, 208);
   --app-dark-background-color: rgb(246, 246, 189);
   --app-light-background-color: rgb(221, 221, 196);
+  --screen-background-color-red: rgb(216, 95, 95);
+  --screen-background-color-green: rgb(111, 228, 111);
+  --screen-background-color-blue: rgb(93, 93, 237);
 }
 
 * {
@@ -22,7 +25,7 @@ body {
   font-size: 16px;
   height: 100vh;
   width: 100%;
-  background-color: crimson;
+  background-color: rgb(232, 211, 172);
   color: var(--font-color);
   font-family: 'VT323';
 }
@@ -236,15 +239,42 @@ main {
   flex-wrap: wrap;
 }
 
-.backgroundImg {
-  background-image: url('../images/mobileBackground.jpeg');
-  object-fit: fill;
-}
-
 /* Settings icon function */
 .settingsContent {
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.chooseColorBoxContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.backgroundColorDivRed,
+.backgroundColorDivGreen,
+.backgroundColorDivBlue {
+  height: 50px;
+  width: 50px;
+}
+
+.backgroundColorDivRed {
+  background-color: var(--screen-background-color-red);
+}
+
+.backgroundColorDivGreen {
+  background-color: var(--screen-background-color-green);
+}
+
+.backgroundColorDivBlue {
+  background-color: var(--screen-background-color-blue);
+}
+
+.backgroundSelected {
+  border: white solid 3px;
 }

@@ -10,17 +10,17 @@ const bossEmails = [
 const backgroundColorDivs = [
   {
     name: 'Red',
-    color: 'Red',
+    color: 'var(--screen-background-color-red)',
     class: 'backgroundColorDivRed',
   },
   {
     name: 'Green',
-    color: 'Green',
+    color: 'var(--screen-background-color-green)',
     class: 'backgroundColorDivGreen',
   },
   {
     name: 'Blue',
-    color: 'Blue',
+    color: 'var(--screen-background-color-blue)',
     class: 'backgroundColorDivBlue',
   },
 ];
@@ -132,6 +132,12 @@ const iconFunctions = () => {
       chooseColorBoxContainer.appendChild(chooseColorBoxTitle);
       chooseColorBoxContainer.appendChild(chooseColorBox);
       settingsContent.appendChild(chooseColorBoxContainer);
+
+      chooseColorBox.addEventListener('click', () => {
+        screen.style.backgroundColor = backgroundColorDiv.color;
+
+        chooseColorBox.classList.add('backgroundSelected');
+      });
     });
 
     iconBoxClose.addEventListener('click', () => {

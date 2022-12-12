@@ -22,12 +22,6 @@ const deviceIcons = [
     alt: 'Icon that represents email.',
   },
   {
-    name: 'Chat',
-    img: 'images/deviceIcons/chatIcon.svg',
-    class: 'chat',
-    alt: 'Icon that represents chat.',
-  },
-  {
     name: 'Settings',
     img: 'images/deviceIcons/settingsIcon.svg',
     class: 'settings',

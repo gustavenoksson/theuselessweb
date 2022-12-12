@@ -261,6 +261,14 @@ main {
 .backgroundColorDivBlue {
   height: 50px;
   width: 50px;
+  transition: 0.2s linear;
+}
+
+.backgroundColorDivRed:hover,
+.backgroundColorDivGreen:hover,
+.backgroundColorDivBlue:hover {
+  scale: 0.95;
+  cursor: pointer;
 }
 
 .backgroundColorDivRed {

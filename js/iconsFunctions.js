@@ -91,6 +91,7 @@ const iconFunctions = () => {
       // Writes a reply on the the emails input field when reply button is clicked.
       replyButton.addEventListener('click', () => {
         const replyText = document.createElement('p');
+        replyText.classList.add('replyText');
         replyText.textContent = 'I quit';
         replyInputField.appendChild(replyText);
       });
@@ -135,7 +136,6 @@ const iconFunctions = () => {
 
       chooseColorBox.addEventListener('click', () => {
         screen.style.backgroundColor = backgroundColorDiv.color;
-
         chooseColorBox.classList.add('backgroundSelected');
       });
     });

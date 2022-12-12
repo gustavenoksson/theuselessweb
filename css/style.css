@@ -239,6 +239,10 @@ main {
   flex-wrap: wrap;
 }
 
+.replyText {
+  margin-right: 10px;
+}
+
 /* Settings icon function */
 .settingsContent {
   width: 100%;
